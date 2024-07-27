@@ -1,16 +1,21 @@
-# Use a dictionary to store information about a person you know.
-# Store their first name, last name, age, and the city in which they live.
-# You should have keys such as first_name, last_name, age, and city.
-# Print each piece of information stored in your dictionary.
-my_love = {'first_name': 'kaeden', 'last_name': 'primavera', 'age': 34, 'city': 'longmont'}
-print(my_love['first_name'].title())
-print(my_love['last_name'].title())
-print(my_love['age'])
-print(my_love['city'].title())
+# Returning a Dictionary
+def build_person(first_name, last_name):
+    """Return a dictionary of information about a person."""
+    person = {'first': first_name, 'last': last_name}
+    return person
 
-me = {'first_name': 'bdubz', 'last_name': 'wiederhold', 'age': 35, 'city': 'longmont'}
-print()
-print(me['first_name'].title())
-print(me['last_name'].title())
-print(me['age'])
-print(me['city'].title())
+musician = build_person('jimi', 'hendrix')
+print(musician)
+
+# You can easily extend this function to accept optional values like any other info about a person such as age, etc.
+
+# None acts as a placeholder value. In conditional tests None evaluates to False.
+def build_person(first_name, last_name, age=None):
+    """Return a dictionary of information about a person."""
+    person = {'first': first_name, 'last': last_name}
+    if age:
+        person['age'] = age
+    return person
+
+musician = build_person('jimi', 'hendrix', age=27)
+print(musician)
