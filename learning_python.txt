@@ -1,0 +1,5 @@
+In Python you can read files.
+In Python you can perform mathematical equations.
+In Python you can make functions to help automate tasks with code.
+In Python you can build video games.
+In Python you can visualize large amounts of data.
